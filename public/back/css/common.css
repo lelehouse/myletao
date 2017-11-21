@@ -1,7 +1,127 @@
-.bg_login{
+html,
+body {
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+}
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.bg_login {
     background-color: #222d32;
 }
 
-.login_mt_150{
+.login_mt_150 {
     margin-top: 150px;
+}
+
+
+/* 侧边栏样式 */
+
+.aside {
+    height: 100%;
+    width: 180px;
+    background-color: #222d32;
+    position: absolute;
+}
+.aside .left_topbar a{
+    text-align: center;
+}
+.aside .user{
+    width: 100%;
+    height: 180px;
+    padding: 30px 50px 0px; 
+}
+.aside .user img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: block;
+}
+.aside .user p{
+    color: #fff;
+    padding-top: 30px;
+}
+.aside .left_topbar{
+    width: 100%;
+    height: 80px;
+    background-color: #337ab7;
+}
+.aside .left_topbar a{
+    display: block;
+    font-size: 40px;
+    line-height: 80px;
+    color:#fff;
+}
+
+.aside .nav a{
+    display: block;
+    height: 30px;
+    color: #ccc;
+    padding-left:40px;
+}
+.aside .nav .first-leavel,
+.aside .nav .second-leavel{
+    padding-left: 50px;
+}
+.main {
+    padding-left: 180px;
+    height: 100%;
+    width:100%;
+}
+.main .right_topbar {
+    width: 100%;
+    height: 80px;
+    background-color:#3c8dbc;
+}
+.main .right_topbar a{
+    display: block;
+    height: 100%;
+    line-height: 80px;
+    font-size: 18px;
+    padding-left: 20px;
+    padding-right:20px;
+    text-align: center;
+    color: #fff;
+}
+
+.main .right_nav{
+    width: 100%;
+    height: 100px;
+    padding:20px;
+}
+.main .right_nav .breadcrumb{
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    padding: 0;
+    font-size: 14px;
+}
+
+.main .content_left{
+    width: 45%;
+    height: 500px;
+}
+
+.main .content_right{
+    width: 45%;
+    height: 500px;
+}
+
+
+
+.main .content{
+
 }

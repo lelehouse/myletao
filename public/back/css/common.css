@@ -35,6 +35,12 @@ a:active {
     width: 180px;
     background-color: #222d32;
     position: absolute;
+    top: 0;
+    left:0;
+    transition:all 1s;
+}
+.aside.now{
+    left: -180px;
 }
 .aside .left_topbar a{
     text-align: center;
@@ -68,9 +74,19 @@ a:active {
 
 .aside .nav a{
     display: block;
-    height: 30px;
+    height: 40px;
+    line-height: 40px;
     color: #ccc;
     padding-left:40px;
+    border: 3px solid transparent;
+}
+.aside .nav a.active{
+    color: #fff;
+    background-color: #1d1f21;
+    border-left-color: #337ab7;
+}
+.aside .nav a span{
+    padding-right: 7px;
 }
 .aside .nav .first-leavel,
 .aside .nav .second-leavel{
@@ -80,6 +96,10 @@ a:active {
     padding-left: 180px;
     height: 100%;
     width:100%;
+    transition: all 1s;
+}
+.main.now{
+    padding-left: 0;
 }
 .main .right_topbar {
     width: 100%;
@@ -118,10 +138,4 @@ a:active {
 .main .content_right{
     width: 45%;
     height: 500px;
-}
-
-
-
-.main .content{
-
 }

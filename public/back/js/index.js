@@ -1,3 +1,5 @@
+
+ //数据报表内容
  // 基于准备好的dom，初始化echarts实例
  var myChart = echarts.init(document.querySelector('.content_left'));
          // 指定图表的配置项和数据
@@ -7,7 +9,6 @@
              },
              tooltip: {},
              legend: {
-                 data:['销量']
              },
              xAxis: {
                  data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
@@ -62,3 +63,7 @@
     ]
 };
 myChart1.setOption(option1);
+
+
+
+

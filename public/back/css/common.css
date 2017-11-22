@@ -27,6 +27,10 @@ a:active {
     margin-top: 150px;
 }
 
+.table.table-bordered td{
+    text-align: center;
+    vertical-align: middle;
+}
 
 /* 侧边栏样式 */
 
@@ -139,3 +143,4 @@ a:active {
     width: 45%;
     height: 500px;
 }
+ 

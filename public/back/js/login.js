@@ -43,7 +43,6 @@
       url: '/employee/employeeLogin',
       data: $form.serialize(),
       success: function (data) {
-        console.log(data)
         if (data.success) {
           location.href = 'index.html'
         }

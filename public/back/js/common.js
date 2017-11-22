@@ -30,7 +30,7 @@ $(".category").on("click",function(){
 
 //右边退出功能
 $(".icon_logout").on('click',function(){
-    $(".modal").modal("show");
+    $(".modal_logout").modal("show");
 });
 
 

@@ -143,4 +143,26 @@ a:active {
     width: 45%;
     height: 500px;
 }
+.content{
+    padding: 0 20px;
+}
+.content .btn_add{
+   margin-bottom:30px;
+}
+
+.fileupload{
+    position: relative;
+}
+.btn_upload{
+    width: 82px;
+    height: 34px;
+}
+.fileupload input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 82px;
+    height: 34px;
+    opacity: 0;
+}
  

@@ -65,8 +65,8 @@ $("#fileupload").fileupload({
     dataType:"json",//指定响应的格式
     done:function (e, data) {//图片上传成功之后的回调函数
       //通过data.result.picAddr可以获取到图片上传后的路径
-      console.log(data);
-      console.log(data.result.picAddr);
+    //   console.log(data);
+    //   console.log(data.result.picAddr);
       //设置给img_box中img的src属性
       $(".img_box img").attr("src", data.result.picAddr);
          //把图片的地址赋值给brandLogo

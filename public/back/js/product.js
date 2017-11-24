@@ -37,6 +37,29 @@ $(function(){
         $('.modal_product').modal('show');        
     });
 
+    //图片上传
+    var imgarr = [];
+    $("#fileupload").fileupload({
+        dataType:"json",//指定响应的格式
+        done:function (e, data) {//图片上传成功之后的回调函数
+        //通过data.result.picAddr可以获取到图片上传后的路径
+        //设置给img_box中img的src属性
+        $(".img_box").append('<img src='+data.result.picAddr+' width="100" height="100" alt="">');
+            //把图片的地址赋值给productlogo
+        //    $("[name='productlogo']").val(data.result.picAddr);
+            imgarr.push(data.result);
+            //把样式改成成功
+            if(imgarr.length===3){
+                $('form').data("bootstrapValidator").updateStatus("productlogo", "VALID");
+            }else{
+                $('form').data("bootstrapValidator").updateStatus("productlogo", "INVALID");
+            }
+        }
+    });
+   
+
+
+
     $('tbody').on('click','.btn',function(e){
          if($(e.target).hasClass("btn_status")){
             // 说明点击是上下架
@@ -126,6 +149,13 @@ $(function(){
                         message:"请输入归属品牌"
                     }
                 }
+            },
+            productlogo:{
+                validators:{
+                    notEmpty:{
+                        message:"请上传三张商品图片"
+                    }
+                }
             }
         }
     });
@@ -133,6 +163,10 @@ $(function(){
     $form.on('success.form.bv',function(e){
        e.preventDefault();
         //发送ajax请求
+        var data = $form.serialize();
+        data += "&picName1="+imgarr[0].picName+"&picAddr1="+imgarr[0].picAddr;
+        data += "&picName2="+imgarr[1].picName+"&picAddr2="+imgarr[1].picAddr;
+        data += "&picName3="+imgarr[2].picName+"&picAddr3="+imgarr[2].picAddr;
         $.ajax({
             type:"post",
             url:"/product/addProduct",
@@ -144,7 +178,8 @@ $(function(){
                 }
                 $form[0].reset();
                 $form.data('bootstrapValdator').resetForm();
-
+                $('.img_box img').remove();
+                imgarr = [];
             }
         });
 

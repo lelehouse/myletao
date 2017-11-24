@@ -1,0 +1,8 @@
+.main .product_nav{
+   padding: 10px;
+}
+.product_nav li{
+    float: left;
+    width: 33.33%;
+}
+

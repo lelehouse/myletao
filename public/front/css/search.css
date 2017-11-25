@@ -1,0 +1,58 @@
+.main .search_form{
+    height: 60px;
+}
+.main form{
+    position: relative;
+}
+.main .search_form input{
+    width: 100%;
+    height: 40px;
+    padding-right: 60px;
+    background-color: #fff;
+    border: 1px solid blue;
+    text-align: left;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.main .search_form button{
+    width: 60px;
+    height: 40px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.main .history_desc {
+    height: 24px;
+    line-height: 24px;
+}
+
+.main .history_desc span:first-child{
+    float: left;
+}
+.main .history_desc span:last-child{
+    float: right;
+}
+
+.search_history{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden; 
+}
+.search_history ul {
+    padding-bottom: 80px;
+}
+.search_history ul li{
+    border: 1px dashed #ccc;
+    border-bottom: none;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 10px;
+}
+.search_history ul li:last-child{
+    border-bottom: 1px dashed #ccc;
+}
+
+

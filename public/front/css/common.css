@@ -58,9 +58,10 @@ img{
 .main{
     background-color: #fff;
     height: 100%;
-    overflow: hidden;
     width: 100%;
+    padding: 10px;
     position: relative;
+    overflow: hidden;
 }
 .product{
     padding: 10px;

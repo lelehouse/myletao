@@ -18,40 +18,46 @@
     <div class="container">
         <!-- 头部开始 -->
         <div class="topbar">
-            <a class="icon_l" href="index.html">
-                <span class="fa fa-home"></span>
+            <a class="icon_l" href="javascript:history.go(-1);">
+                <span class="mui-icon mui-icon-arrowleft"></span>
             </a>
             <a class="icon_r" href="search.html">
                 <span class="fa fa-search"></span>
             </a>
-            <h4>乐乐商场</h4>
+            <h4>乐乐商城分类</h4>
         </div>
       <!--  中间部分-->
         <div class="main">
-            <div class="mui-scroll-wrapper">
-                <div class="mui-scroll">
-                    <!--这里放置真实显示的DOM内容-->
-                    <!-- 图片轮播 -->
-                  
-                    <!-- 商品导航 -->
-                      
-
-                    
-
-                </div>
+            <!-- 左侧一级分类 -->
+            <div class="category_l">
+               <div class="mui-scroll-wrapper">
+                 <ul class="mui-scroll">
+                            <!--这里放置真实显示的DOM内容-->
+                    <!-- <li class="active"><a href="#">运动品牌</a></li> -->
+                    <!-- 挖一个坑 -->
+                 </ul>
+               </div>
+            </div>
+            <!-- 右侧品牌分类 -->
+            <div class="category_r">
+               <div class="mui-scroll-wrapper">
+                 <ul class="mui-scroll">
+                    <!-- 挖一个坑 -->
+                  </ul>
+               </div>  
             </div>
         </div>
 
         <!-- 底部开始 -->
         <div class="footer">
             <ul>
-                <li class="active">
+                <li>
                     <a href="index.html">
                         <span class="fa fa-home"></span>
                         <p>首页</p>
                     </a>
                 </li>
-                <li>
+                <li  class="active">
                     <a href="category.html">
                         <span class="fa fa-bars"></span>
                         <p>分类</p>
@@ -72,6 +78,18 @@
             </ul>
         </div>
     </div>
+
+    <script type="text/html" id="tpl_l">
+      {{each rows v i }}
+          <li data-id="{{v.id}}" class="{{i===0?'active':''}}"><a href="#">{{v.categoryName}}</a></li>
+      {{/each}}
+    </script>
+
+    <script type="text/html" id="tpl_r">
+        {{each rows v i }}
+            <li ><a href="#"><img src="{{v.brandLogo}}" alt=""><p>{{v.brandName}}</p></a></li> 
+        {{/each}}
+      </script>
     <script src="./lib/zepto/zepto.min.js"></script>
     <script src="./lib/mui/js/mui.js"></script>
     <script src="./lib/artTemplate/template-web.js"></script>
